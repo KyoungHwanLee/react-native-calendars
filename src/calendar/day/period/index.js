@@ -120,6 +120,32 @@ export default class PeriodDay extends Component {
     let fillerStyle = {};
     let fillers;
 
+    switch (this.props.date?.dayNameIndex) {
+      case 0:
+        textStyle.push(this.style['dayTextAtIndex0']);
+        break;
+      case 1:
+        textStyle.push(this.style['dayTextAtIndex1']);
+        break;
+      case 2:
+        textStyle.push(this.style['dayTextAtIndex2']);
+        break;
+      case 3:
+        textStyle.push(this.style['dayTextAtIndex3']);
+        break;
+      case 4:
+        textStyle.push(this.style['dayTextAtIndex4']);
+        break;
+      case 5:
+        textStyle.push(this.style['dayTextAtIndex5']);
+        break;
+      case 6:
+        textStyle.push(this.style['dayTextAtIndex6']);
+        break;
+      default:
+        break;
+    }
+
     if (state === 'disabled') {
       textStyle.push(this.style.disabledText);
     } else if (state === 'today') {
